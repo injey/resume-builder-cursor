@@ -1,0 +1,42 @@
+---
+description: Export markdown resumes to shareable DOCX and PDF using the repo export scripts.
+globs:
+  - jey/**/*.md
+alwaysApply: false
+---
+
+# Resume Export Workflow
+
+When the user asks to **generate**, **export**, or **create a shareable PDF** (or DOCX/Google Docs-ready file) for a resume in this repository:
+
+1. Ensure dependencies are installed by running:
+   ```bash
+   ./scripts/install-export-deps.sh
+   ```
+   Run once, or when `pandoc` is missing.
+
+2. Export the target resume (default revised resume if no file is specified):
+   ```bash
+   ./scripts/export-resume.sh [path/to/resume.md]
+   ```
+
+3. Report the output paths:
+   - `*.docx` — upload to Google Drive → **Open with Google Docs** for final polish or sharing
+   - `*.pdf` — share directly
+
+4. Do **not** use Markdown PDF editor extensions; use this script instead.
+
+## Default resume path
+
+`jey/revised/Jeykumar_Nagarajan_Cloud_Data_Architect.md`
+
+## Customizing PDF/Word styling
+
+- PDF fonts and layout: edit `templates/resume-pdf.css`
+- Word/Google Docs styles: edit `templates/resume-reference.docx` once in Word or Google Docs (set Arial 11pt body, heading sizes), then re-run export
+
+## Troubleshooting
+
+- **pandoc not found** → run `./scripts/install-export-deps.sh`
+- **PDF fails, DOCX works** → install Google Chrome
+- **Table layout issues in Google Docs** → open the `.docx` in Docs and adjust column widths once; PDF uses CSS and usually does not need changes

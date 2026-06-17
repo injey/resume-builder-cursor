@@ -1,0 +1,33 @@
+---
+description: Orchestrate resume-specialist skills for resume, cover-letter, and job-targeting workflows in this repository.
+globs:
+  - jey/**/*.md
+alwaysApply: false
+---
+
+# Resume Specialist Workflow
+
+Use this rule when working on resume documents in this repository.
+
+## Core workflow
+
+1. Start with `job-description-analyzer` when a target job posting is provided.
+2. Use `resume-tailor` to align the resume to that role while keeping claims truthful.
+3. Use `resume-bullet-writer` to strengthen weak bullets and add measurable outcomes.
+4. Use `resume-quantifier` when metrics are missing but can be responsibly estimated.
+5. Use `resume-ats-optimizer` to improve keyword alignment and ATS compatibility.
+6. Use `resume-formatter` for clean, readable, ATS-friendly final formatting.
+7. When the user wants a shareable PDF or Google Docs file, run `./scripts/export-resume.sh` (see `resume-export` rule).
+
+## Conditional routing
+
+- Use `cover-letter-generator` when the user asks for a tailored cover letter.
+- Use `linkedin-profile-optimizer` when the user asks to align LinkedIn with the resume.
+- Use `interview-prep-generator` after a tailored resume is finalized and the user asks for interview prep.
+- Use `resume-version-manager` when maintaining multiple target-role versions.
+
+## Output expectations
+
+- Keep language concise, specific, and impact-oriented.
+- Prioritize quantified outcomes over responsibility-only statements.
+- Preserve truthfulness and avoid inventing unverifiable claims.

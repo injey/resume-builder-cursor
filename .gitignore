@@ -1,0 +1,6 @@
+# Temporary export artifacts
+*.export.html
+
+# Optional: uncomment to ignore generated outputs
+# jey/**/*.docx
+# jey/**/*.pdf
