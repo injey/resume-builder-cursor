@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Export a markdown resume to shareable DOCX and PDF.
+# Export a markdown resume to shareable DOCX and PDF.   #
 #
 # Usage:
 #   ./scripts/export-resume.sh [path/to/resume.md]
