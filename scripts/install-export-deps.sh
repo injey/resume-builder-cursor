@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install dependencies for resume PDF/DOCX export.
+# Install dependencies for resume PDF/DOCX export.   #
 set -euo pipefail
 
 echo "Checking resume export dependencies..."
